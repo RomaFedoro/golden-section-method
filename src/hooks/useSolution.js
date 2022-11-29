@@ -65,12 +65,6 @@ export const useSolution = (defaultValues) => {
   };
 
   const handleSubmit = (value) => {
-    if (
-      Object.keys({ ...params, ...value }).every(
-        (key) => params[key] === value[key]
-      )
-    )
-      return;
     setParams(convertInputData(value));
   };
 

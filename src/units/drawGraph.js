@@ -192,8 +192,8 @@ const drawGraph = async (ref, params) => {
   drawSegments(ctx);
   drawAxios(ctx);
   drawGraphFunction(ctx);
-  drawRange(ctx, params);
   drawNormal(ctx, params);
+  drawRange(ctx, params);
 };
 
 export default drawGraph;

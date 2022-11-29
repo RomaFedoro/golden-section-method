@@ -1,16 +1,16 @@
 // Тут можно добавить свои функции
 const FUNCTIONS = [
   {
-    func: (x) => x ** 2 - 4,
-    text: "f(x) = x^2 - 4",
+    func: (x) => x ** 2 - 9,
+    text: "f(x) = x^2 - 9",
   },
   {
-    func: (x) => (1 / 32) * (x + 1) ** 3 * (x - 3) ** 4,
-    text: "f(x) = \\frac{1}{32} (x + 1)^3  (x - 3)^4",
+    func: (x) => -(x ** 2) / 2 - 4 * x,
+    text: "f(x) = -x^2 / 2 - 4x",
   },
   {
-    func: (x) => x * Math.sin(x),
-    text: "f(x) = x sin(x)",
+    func: (x) => x ** 3 / 4 - 16 * x,
+    text: "f(x) = x^3 / 4 - 16x",
   },
 ];
 

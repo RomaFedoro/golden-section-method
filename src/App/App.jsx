@@ -12,6 +12,7 @@ const App = () => {
 
   return (
     <div className={styles.container}>
+      <Graph ref={ref} />
       <div className={styles.form}>
         <h1>Поиск экстремума методом&nbsp;золотого&nbsp;сечения</h1>
         <Solution
@@ -26,7 +27,6 @@ const App = () => {
           draw={draw}
         />
       </div>
-      <Graph ref={ref} />
     </div>
   );
 };

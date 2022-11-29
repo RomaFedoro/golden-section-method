@@ -1,10 +1,11 @@
-const findLocalMaximum = ({ func, a, b, precision }) => {
-  const x = (a + b) / 2;
-  const f1 = func(x - precision);
-  const f2 = func(x + precision);
+const t = (Math.sqrt(5) - 1) / 2;
 
-  if (f1 < f2) return { a: x, b };
-  return { a, b: x };
+const findLocalMinimum = ({ func, a, b }) => {
+  const x1 = b - t * (b - a);
+  const x2 = a + t * (b - a);
+
+  if (func(x1) < func(x2)) return { a: x1, b };
+  return { a, b: x2 };
 };
 
-export default findLocalMaximum;
+export default findLocalMinimum;
