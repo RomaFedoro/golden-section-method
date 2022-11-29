@@ -1,0 +1,14 @@
+.container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    column-gap: 240px;
+}
+
+.form {
+    width: 600px;
+    min-height: 860px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
+}

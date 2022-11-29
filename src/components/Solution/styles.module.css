@@ -1,0 +1,6 @@
+.text {
+    width: 100%;
+    font-family: 'Computer Modern Serif';
+    font-size: 28px;
+    user-select: none;
+}

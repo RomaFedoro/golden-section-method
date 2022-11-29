@@ -1,0 +1,33 @@
+body {
+  font-family: 'Computer Modern Serif';
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  display: flex;
+}
+
+button {
+  font-family: 'Computer Modern Bright';
+  padding: 22px 24px;
+  border: none;
+  border-radius: 6px;
+  background-color: #6cd1eb;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 22px;
+  transition: 0.1s background-color;
+}
+
+button:hover {
+  background-color: #78c3d5;
+}
+
+h1 {
+  font-family: 'Computer Modern Bright';
+  font-weight: 600;
+}

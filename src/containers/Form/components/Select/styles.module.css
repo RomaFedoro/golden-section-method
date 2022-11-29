@@ -1,0 +1,89 @@
+.block {
+    position: relative;
+    flex: 1;
+}
+
+.header, .item {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 24px;
+    background: #ffffff;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.item {
+    border-bottom: 1px solid #e2e4e6;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item:hover {
+    background-color: #e2e4e6;
+}
+
+.item_active {
+    background-color: #f1f2f3;
+    cursor: default;
+}
+
+.item_active:hover {
+    background-color: #f1f2f3;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #c8cbce;
+    border-radius: 6px;
+    transition: .1s border;
+}
+
+.header:hover {
+    background-color: transparent;
+}
+
+.icon {
+    margin-bottom: 2px;
+    transition: opacity .1s;
+}
+
+.icon svg {
+    width: 23px;
+    height: 8px;
+}
+
+.list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    flex-direction: column;
+    display: none;
+    overflow: hidden;
+    border-radius: 0px 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 20%) 0px 5px 5px -3px, rgba(0, 0, 0, 14%) 0px 8px 10px 1px, rgba(0, 0, 0, 12%) 0px 3px 14px 2px;
+}
+
+/* Active state */
+
+.active .header {
+    border-radius: 6px 6px 0px 0px;
+    border-color: #393939;
+}
+
+.active .list {
+    display: block;
+}
+
+.active .icon {
+    opacity: 0;
+}

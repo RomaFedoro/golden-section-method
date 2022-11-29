@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.text {
+  width: max-content;
+  font-family: 'Computer Modern Serif';
+  font-size: 28px;
+  user-select: none;
+}
+
+.block {
+  font-family: 'Computer Modern Bright';
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #c8cbce;
+  border-radius: 6px;
+  padding: 16px;
+  font-size: 28px;
+  transition: .1s border;
+}
+
+.block:focus {
+  outline: none;
+  border-color: #393939;
+}
+
+.block::placeholder {
+  color: #d2d2d2;
+  font-family: 'Computer Modern Bright';
+  font-size: 24px;
+}
