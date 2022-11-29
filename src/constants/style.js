@@ -3,7 +3,7 @@ export const COLORS = {
   graph: "#000",
   axis: "#8f8e8e",
   normal: "rgb(51, 182, 95)",
-  rectBackground: "#78c2d442",
+  rect: "red",
   segments: "#abaeb156",
   point: "red",
 };
@@ -14,7 +14,7 @@ export const THICKNESS = {
   normal: 1.5,
   segmentsLine: 1.25,
   segments: 1.5,
-  rect: 0.5,
+  rect: 3,
 };
 
 export const SIZE = {

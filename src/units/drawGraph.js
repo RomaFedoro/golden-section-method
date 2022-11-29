@@ -41,32 +41,6 @@ const drawGraphFunction = (ctx) => {
   }
 };
 
-const drawRange = (ctx, { a, b }) => {
-  const { getCoord, func } = dataGraph;
-  if (a !== undefined && a === b) {
-    const { x, y } = getCoord(a);
-    const text = `(${a.toFixed(3)}; ${func(a).toFixed(3)})`;
-    ctx.beginPath();
-    ctx.arc(x, y, SIZE.point, 0, 2 * Math.PI, false);
-    ctx.fillStyle = COLORS.point;
-    ctx.font = `${SIZE.pointText}px Arial`;
-    ctx.textAlign = "center";
-    ctx.fillText(text, x, y + SIZE.normal + SIZE.point);
-    ctx.fill();
-    return;
-  }
-
-  ctx.fillStyle = COLORS.rectBackground;
-  ctx.setLineDash([0, 0]);
-  ctx.strokeStyle = COLORS.rectBorder;
-  ctx.lineWidth = THICKNESS.rect;
-
-  const { x: x1 } = getCoord(a);
-  const { x: x2 } = getCoord(b);
-
-  ctx.fillRect(x1, 0, x2 - x1, HEIGHT_GRAPH);
-};
-
 const drawLine = (ctx, coord, isHorizontal = true, custom) => {
   ctx.beginPath();
 
@@ -108,6 +82,12 @@ const drawDashLine =
     }
     ctx.fillText(text, textCoord, HEIGHT_GRAPH - 1);
   };
+
+const drawRangeLine = (ctx) => {
+  ctx.setLineDash([0, 0]);
+  ctx.lineWidth = THICKNESS.rect;
+  ctx.strokeStyle = ctx.fillStyle = COLORS.point;
+};
 
 const clearCanvas = (ctx) => {
   ctx.fillStyle = COLORS.background;
@@ -157,6 +137,32 @@ const drawSegments = (ctx) => {
     }
     currSegmentY += widthSegmentY;
   }
+};
+
+const drawRange = (ctx, { a, b }) => {
+  const { getCoord, func } = dataGraph;
+  if (a !== undefined && a === b) {
+    const { x, y } = getCoord(a);
+    const text = `(${a.toFixed(3)}; ${func(a).toFixed(3)})`;
+    ctx.beginPath();
+    ctx.arc(x, y, SIZE.point, 0, 2 * Math.PI, false);
+    ctx.fillStyle = COLORS.point;
+    ctx.font = `${SIZE.pointText}px Arial`;
+    ctx.textAlign = "center";
+    ctx.fillText(text, x, y + SIZE.normal + SIZE.point);
+    ctx.fill();
+    return;
+  }
+
+  ctx.setLineDash([0, 0]);
+  ctx.fillStyle = ctx.strokeStyle = COLORS.point;
+  ctx.lineWidth = THICKNESS.rect;
+
+  const { x: x1 } = getCoord(a);
+  const { x: x2 } = getCoord(b);
+
+  drawLine(ctx, x1, false, drawRangeLine);
+  drawLine(ctx, x2, false, drawRangeLine);
 };
 
 const drawNormal = (ctx, params) => {
