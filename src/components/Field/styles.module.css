@@ -6,19 +6,17 @@
 
 .text {
   width: max-content;
-  font-family: 'Computer Modern Serif';
-  font-size: 28px;
+  font-size: 20px;
   user-select: none;
 }
 
 .block {
-  font-family: 'Computer Modern Bright';
   flex: 1;
   background: #ffffff;
   border: 1px solid #c8cbce;
   border-radius: 6px;
-  padding: 16px;
-  font-size: 28px;
+  padding: 12px;
+  font-size: 18px;
   transition: .1s border;
 }
 
@@ -28,7 +26,6 @@
 }
 
 .block::placeholder {
-  color: #d2d2d2;
-  font-family: 'Computer Modern Bright';
-  font-size: 24px;
+  color: #8d8d8d;
+  font-size: 18px;
 }

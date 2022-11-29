@@ -4,7 +4,7 @@ import findLocalMinimum from "../units/findLocalMinimum";
 import findLocalMaximum from "../units/findLocalMaximum";
 import drawGraph from "../units/drawGraph";
 
-export const useSolution = (defaultValues, setSolutionVisible) => {
+export const useSolution = (defaultValues) => {
   const ref = useRef(null);
   const [params, setParams] = useState(defaultValues);
   const [result, setResult] = useState({});
@@ -62,7 +62,6 @@ export const useSolution = (defaultValues, setSolutionVisible) => {
     setTotal(0);
     setResult({});
     setParams({});
-    setSolutionVisible(false);
   };
 
   const handleSubmit = (value) => {
@@ -73,7 +72,6 @@ export const useSolution = (defaultValues, setSolutionVisible) => {
     )
       return;
     setParams(convertInputData(value));
-    setSolutionVisible(true);
   };
 
   const draw = (value) => {

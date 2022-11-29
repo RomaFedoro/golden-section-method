@@ -9,27 +9,13 @@ import Select from "./components/Select";
 import styles from "./styles.module.css";
 
 const Form = ({ defaultValues, onSubmit, draw }) => {
-  const { handleSubmit, getValues, control } = useForm({ defaultValues });
-
-  const onBlur = () => draw(getValues());
-
-  useEffect(() => {
-    draw(defaultValues);
-  }, []);
+  const { handleSubmit, control } = useForm({ defaultValues });
 
   return (
-    <form
-      className={styles.container}
-      onSubmit={handleSubmit(onSubmit)}
-      onBlur={onBlur}
-    >
-      <Container label="Функция">
+    <form className={styles.container} onSubmit={handleSubmit(onSubmit)}>
+      <Container label="Введите значения">
         <Select control={control} nameField="funcId" data={FUNCTIONS} />
-      </Container>
-      <Container label="Найти">
         <Select control={control} nameField="extremumId" data={EXTREMUMS} />
-      </Container>
-      <Container label="Входные данные">
         <NumberField
           label="a ="
           control={control}
@@ -42,11 +28,11 @@ const Form = ({ defaultValues, onSubmit, draw }) => {
           nameField="end"
           placeholder="Введите конечное значение"
         />
-      </Container>
-      <Container label="Точность">
         <PrecisionField control={control} nameField="precisionCount" />
       </Container>
-      <button type="submit">Найти точку</button>
+      <button className={styles.button} type="submit">
+        Решить
+      </button>
     </form>
   );
 };

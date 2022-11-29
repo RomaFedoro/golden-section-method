@@ -1,5 +1,5 @@
-export const WIDTH_GRAPH = 1024;
-export const HEIGHT_GRAPH = 1024;
+export const WIDTH_GRAPH = 800;
+export const HEIGHT_GRAPH = 800;
 
 export const WIDTH_PADDING = 60;
 export const HEIGHT_PADDING = 60;

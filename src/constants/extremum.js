@@ -1,11 +1,11 @@
 const EXTREMUMS = [
   {
     isMin: true,
-    text: "Точку локального минимума",
+    text: "min",
   },
   {
     isMin: false,
-    text: "Точку локального максимума",
+    text: "max",
   },
 ];
 

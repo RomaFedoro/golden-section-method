@@ -1,11 +1,11 @@
 export const COLORS = {
-  background: "#000",
-  graph: "#78c3d5",
+  background: "#fff",
+  graph: "#000",
   axis: "#8f8e8e",
-  normal: "#f5fc28",
+  normal: "rgb(51, 182, 95)",
   rectBackground: "#78c2d442",
-  segments: "#2e3030",
-  point: "white",
+  segments: "#abaeb156",
+  point: "red",
 };
 
 export const THICKNESS = {
@@ -19,6 +19,7 @@ export const THICKNESS = {
 
 export const SIZE = {
   normal: 24,
+  pointText: 16,
   segments: 32,
   point: 8,
 };

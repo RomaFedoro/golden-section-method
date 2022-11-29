@@ -14,7 +14,7 @@ const PrecisionField = ({ control, nameField, disabled, ...props }) => {
 
   return (
     <div>
-      <div className={styles.text}>ε = {getPrecision(value)}</div>
+      <div className={styles.text}>E = {getPrecision(value)}</div>
       {!disabled && (
         <div className={styles.container}>
           <input

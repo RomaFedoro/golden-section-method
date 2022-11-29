@@ -1,6 +1,8 @@
 .text {
     width: 100%;
-    font-family: 'Computer Modern Serif';
-    font-size: 28px;
+    font-size: 20px;
+    background: rgb(241, 240, 240);
+    padding: 8px;
+    border-radius: 4px;
     user-select: none;
 }

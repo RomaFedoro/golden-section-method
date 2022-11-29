@@ -1,5 +1,9 @@
 .container {
   display: flex;
   flex-direction: column;
-  row-gap: 48px;
+  row-gap: 28px;
+}
+
+.button {
+  margin-top: 20px;
 }

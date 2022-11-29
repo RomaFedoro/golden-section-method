@@ -49,9 +49,9 @@ const drawRange = (ctx, { a, b }) => {
     ctx.beginPath();
     ctx.arc(x, y, SIZE.point, 0, 2 * Math.PI, false);
     ctx.fillStyle = COLORS.point;
-    ctx.font = `${SIZE.normal}px Computer Modern Serif`;
+    ctx.font = `${SIZE.pointText}px Arial`;
     ctx.textAlign = "center";
-    ctx.fillText(text, x, y + SIZE.normal + SIZE.point * 2);
+    ctx.fillText(text, x, y + SIZE.normal + SIZE.point);
     ctx.fill();
     return;
   }
@@ -96,7 +96,7 @@ const drawDashLine =
     ctx.setLineDash([16, 6]);
     ctx.lineWidth = THICKNESS.normal;
     ctx.strokeStyle = ctx.fillStyle = COLORS.normal;
-    ctx.font = `${SIZE.normal}px Computer Modern Serif`;
+    ctx.font = `${SIZE.normal}px Arial`;
     let textCoord = coord;
 
     if (isStart) {

@@ -6,9 +6,10 @@
 .header, .item {
     width: 100%;
     box-sizing: border-box;
-    font-size: 24px;
+    font-size: 18px;
     background: #ffffff;
-    padding: 16px;
+    color: black; 
+    padding: 12px;
     border: none;
     cursor: pointer;
     font-weight: 400;
